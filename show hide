@@ -1,0 +1,28 @@
+///hide
+client.on('message', message => {
+        if(message.content === prefix + "hide") {
+        if(!message.channel.guild) return;
+        if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply('You Dont Have Perms :x:');
+               message.channel.overwritePermissions(message.guild.id, {
+               READ_MESSAGES: false
+   })
+                message.channel.send('**تـم أخفـاء الشـات**')
+   }
+  });
+  
+  
+///show
+
+  client.on('message', message => {
+        if(message.content === prefix + "show") {
+        if(!message.channel.guild) return;
+        if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply(':x:');
+               message.channel.overwritePermissions(message.guild.id, {
+               READ_MESSAGES: true
+   })
+                message.channel.send('**Chat has been displayed**')
+   }
+  });
+
+
+//Enjoy and follow our networks here : https://not.ju.mp/ - https://that.ju.mp/
