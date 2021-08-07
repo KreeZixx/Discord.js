@@ -1,2 +1,6 @@
 # Disocrd.JS script
-Discord.JS Welcome 
+Free JavaScript Source to code your own discord bot..
+
+Feel Free to Support @Albertless and me by following us :
+https://that.ju.mp/
+https://not.ju.mp/
