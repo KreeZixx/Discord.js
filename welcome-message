@@ -1,0 +1,24 @@
+const { MessageEmbed } = require("discord.js")
+
+module.exports = (client) => {
+    const welcomechannelId = '778024453782241321' //Welcome Message Channel
+    const targetChannelId = `778024455359430697` //Rules ans information Channel  
+
+    client.on('guildMemberAdd', (member) => {
+        console.log(member) // If You Want The User Info in Console Who Joined Server Then You Can Add This Line. // Optional
+        const channel = member.guild.channels.cache.get(welcomechannelId)
+
+        const embed = new MessageEmbed()
+        .setTitle(`YOUR TITLE`)
+        .setThumbnail(member.user.displayAvatarURL({dynamic: true, size: 512})) //Avatar of the new member
+        .setDescription(`Hello <@${member.user.id}>, Welcome To our server ! ❤️
+check out the ${member.guild.channels.cache.get(targetChannelId).toString()}.`) //Principal Text of the Embed
+        .setFooter(`Coded By KreeZix#2255.`, `YOUR IMAGE`) //set the image of footer here
+        .setColor('#a33244 , #fcd041')
+        .setImage('YOUR BANNER') //set the banner of the Embed
+        
+    channel.send(embed) 
+    })
+}
+
+//Enjoy and follow our networks here : https://not.ju.mp/ - https://that.ju.mp/
